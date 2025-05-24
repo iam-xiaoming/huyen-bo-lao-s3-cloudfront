@@ -152,7 +152,3 @@ AWS_S3_CUSTOM_DOMAIN=d123abcxyz.cloudfront.net
 ### ✅ Hoàn tất
 
 Giờ đây, Django sẽ tự động dùng AWS S3 và CloudFront để lưu trữ và phân phối các tệp media và static.
-
-> 🔐 Nếu bạn muốn dùng CloudFront signed URL (bảo mật link), hãy báo để mình hướng dẫn chi tiết thêm.
-
-```
