@@ -102,13 +102,13 @@ AWS_S3_CUSTOM_DOMAIN=your-bucket-name.s3.amazonaws.com
 ### 7️⃣ Cấu hình `settings.py`
 
 ```python
-import os
+import config
 
-AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
-AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
-AWS_STORAGE_BUCKET_NAME = os.getenv("AWS_STORAGE_BUCKET_NAME")
-AWS_DEFAULT_REGION = os.getenv("AWS_DEFAULT_REGION")
-AWS_S3_CUSTOM_DOMAIN = os.getenv("AWS_S3_CUSTOM_DOMAIN")
+AWS_ACCESS_KEY_ID = config("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = config("AWS_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = config("AWS_STORAGE_BUCKET_NAME")
+AWS_DEFAULT_REGION = config("AWS_DEFAULT_REGION")
+AWS_S3_CUSTOM_DOMAIN = config("AWS_S3_CUSTOM_DOMAIN")
 
 STORAGES = {
     'default': {
@@ -130,9 +130,6 @@ STORAGES = {
         },
     },
 }
-
-STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/static/"
-MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/media/"
 ```
 
 ---
